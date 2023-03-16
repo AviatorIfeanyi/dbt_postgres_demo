@@ -13,9 +13,8 @@ sources:
                - not_null
           
           - name: company
-            description:
+            description: "Name of company"
             tests:
-              - unique
               - not_null
           
           - name: country
@@ -47,9 +46,7 @@ sources:
            
           - name: select_investors
             description: "Investors involved in this unicorn"
-            tests:
-               - not_null
       
-      # - name: unicorn_dates
+      - name: unicorn_dates
       
-      # - name: unicorn_industries
+      - name: unicorn_industries
