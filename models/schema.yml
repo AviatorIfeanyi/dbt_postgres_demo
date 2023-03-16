@@ -11,19 +11,45 @@ sources:
             tests:
                - unique
                - not_null
+          
           - name: company
-            description: "Name of unicorn company"
+            description:
             tests:
-              - not_null 
+              - unique
+              - not_null
+          
           - name: country
             description: "The country where the company is located"
             tests:
               - not_null
+          
           - name: continent
             description: "The continent where the company is located"
       
       - name: unicorn_funding
+        description: "Amount of money raised by investors"
+        columns:
+          - name: company_id
+            description: "The primary key for this table"
+            tests:
+               - unique
+               - not_null
+
+          - name: valuation
+            description: "The net worth of the unicorn company"
+            tests:
+               - not_null
+
+          - name: funding
+            description: "Amount of money raised by investors for the company"
+            tests:
+               - not_null
+           
+          - name: select_investors
+            description: "Investors involved in this unicorn"
+            tests:
+               - not_null
       
-      - name: unicorn_dates
+      # - name: unicorn_dates
       
-      - name: unicorn_industries
+      # - name: unicorn_industries
