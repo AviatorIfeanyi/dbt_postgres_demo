@@ -1,0 +1,29 @@
+version: 2
+sources:
+  - name: world_unicorns
+    schema: public
+    tables:
+      - name: unicorn_companies
+        description: "Names of companies that have become unicorns"
+        columns:
+          - name: company_id
+            description: "The primary key for this table"
+            tests:
+               - unique
+               - not_null
+          - name: company
+            description: "Name of unicorn company"
+            tests:
+              - not_null 
+          - name: country
+            description: "The country where the company is located"
+            tests:
+              - not_null
+          - name: continent
+            description: "The continent where the company is located"
+      
+      - name: unicorn_funding
+      
+      - name: unicorn_dates
+      
+      - name: unicorn_industries
